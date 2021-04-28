@@ -1,0 +1,15 @@
+psycopg2-binary
+django==2.1.5
+gunicorn
+django-widget-tweaks
+django-simple-search
+Pillow
+whitenoise
+Django==2.1.5
+django-simple-search==1.0.2
+django-widget-tweaks==1.4.8
+gunicorn==20.1.0
+Pillow==8.2.0
+psycopg2-binary==2.8.6
+pytz==2021.1
+whitenoise==5.2.0

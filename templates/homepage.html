@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>
+
+@media (min-width: 576px){
+    .jumbotron {
+     padding: 2%;
+    }
+}
+
+</style>
+<br><br><br>
+
+<div class="ffff"></div>
+
+
+    <div class="container-fluid">
+        <div class="card-columns">
+            
+            {% for post in object_list %}
+            <div class="card border border-dark">
+                    <a href="{% url 'postdetail' post.pk %}">
+                        <img class="card-img-top" src="media/{{ post.topbanner}}" alt="Card image cap">
+                    </a>
+
+                <div class="card-body">
+                    <a href="{% url 'postdetail' post.pk %}"><h4 class="card-title">{{ post.title }}</h4></a>
+                    <p class="card-text"><a href="{% url 'postdetail' post.pk %}" class="text-black">{% autoescape off %}{{post.text|truncatechars:100}}{% endautoescape %}</a></p>
+                    <div class="row">
+                        <div id="smaller" class="col-xs-7 col-sm-7">
+                            {% if "auth.add_permision" in perms %}
+                                <a class="btn btn-primary post_editt" href="{% url 'postedit' post.pk %}">Редагувати</a>
+                                <a class="btn btn-warning-outline post_delett"  href="{% url 'postdelete' post.pk %}">Видалити</a>
+                            {% endif %}
+                            <p class="card-text"><small class="text-muted">Автор <a href="" class="text-black">{{ post.author.first_name }}</a></small></p>
+
+
+                        </div>
+                        <div class="col-xs-5 col-sm-5 Sma_tag">
+                                <p class="card-text text-right"><small class="text-muted"><a href="" class="text-black"><span class="badge badge-primary"># {{ post.category }}</span> </a></small></p>
+                        </div>
+</div>            </div></div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+ 
+
+
+
+
+    
+          
+{% if is_paginated %}
+<div class="row">
+    <div class="col-sm-12 col-md-8 offset-md-2">
+    <br>
+<ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+        <li  class="page-item"><a  class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>    
+        </a></li>
+    {% else %}
+        <li class='disabled page-item'> <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a><li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+        {% if page_obj.number == i %}
+            <li class="page-item active"><span><a class="page-link" href="?page={{i}}">{{ i }} </a></span></li>
+        {% else %}
+            <li  class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+        {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+        <li><a class="page-link"  href="?page={{ page_obj.next_page_number }}"> <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span></a></li>
+    {% else %}
+        <li class="disabled page-item"><a href=""  class="page-link" ><span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span></a></li>
+    {% endif %}
+</ul>
+{% endif %}
+
+</div></div>
+  
+</body>
+</html>
+
+
+
+{% endblock %}

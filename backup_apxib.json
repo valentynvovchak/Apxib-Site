@@ -1,0 +1,638 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$120000$fNZCpJQzp3gD$Rr2Ew2LyiNus+sgNDcJDkiIX+FQZPpNM2vxyv+dVFiY=",
+        "last_login": "2021-04-28T07:07:54Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "\u041e\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440",
+        "last_name": "\u041f\u0430\u0432\u043b\u0438\u0448\u0438\u043d",
+        "email": "valentyn.vovchak@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-04-28T07:07:33Z",
+        "groups": [],
+        "user_permissions": [
+            [
+                "add_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "change_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "delete_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "view_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "add_group",
+                "auth",
+                "group"
+            ],
+            [
+                "change_group",
+                "auth",
+                "group"
+            ],
+            [
+                "delete_group",
+                "auth",
+                "group"
+            ],
+            [
+                "view_group",
+                "auth",
+                "group"
+            ],
+            [
+                "add_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "change_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "delete_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "view_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "add_user",
+                "auth",
+                "user"
+            ],
+            [
+                "change_user",
+                "auth",
+                "user"
+            ],
+            [
+                "delete_user",
+                "auth",
+                "user"
+            ],
+            [
+                "view_user",
+                "auth",
+                "user"
+            ],
+            [
+                "add_blog",
+                "blog",
+                "blog"
+            ],
+            [
+                "change_blog",
+                "blog",
+                "blog"
+            ],
+            [
+                "delete_blog",
+                "blog",
+                "blog"
+            ],
+            [
+                "view_blog",
+                "blog",
+                "blog"
+            ],
+            [
+                "add_comment",
+                "blog",
+                "comment"
+            ],
+            [
+                "change_comment",
+                "blog",
+                "comment"
+            ],
+            [
+                "delete_comment",
+                "blog",
+                "comment"
+            ],
+            [
+                "view_comment",
+                "blog",
+                "comment"
+            ],
+            [
+                "add_commentreply",
+                "blog",
+                "commentreply"
+            ],
+            [
+                "change_commentreply",
+                "blog",
+                "commentreply"
+            ],
+            [
+                "delete_commentreply",
+                "blog",
+                "commentreply"
+            ],
+            [
+                "view_commentreply",
+                "blog",
+                "commentreply"
+            ],
+            [
+                "add_document",
+                "blog",
+                "document"
+            ],
+            [
+                "change_document",
+                "blog",
+                "document"
+            ],
+            [
+                "delete_document",
+                "blog",
+                "document"
+            ],
+            [
+                "view_document",
+                "blog",
+                "document"
+            ],
+            [
+                "add_hashtag",
+                "blog",
+                "hashtag"
+            ],
+            [
+                "change_hashtag",
+                "blog",
+                "hashtag"
+            ],
+            [
+                "delete_hashtag",
+                "blog",
+                "hashtag"
+            ],
+            [
+                "view_hashtag",
+                "blog",
+                "hashtag"
+            ],
+            [
+                "add_userimage",
+                "blog",
+                "userimage"
+            ],
+            [
+                "change_userimage",
+                "blog",
+                "userimage"
+            ],
+            [
+                "delete_userimage",
+                "blog",
+                "userimage"
+            ],
+            [
+                "view_userimage",
+                "blog",
+                "userimage"
+            ],
+            [
+                "add_userinfo",
+                "blog",
+                "userinfo"
+            ],
+            [
+                "change_userinfo",
+                "blog",
+                "userinfo"
+            ],
+            [
+                "delete_userinfo",
+                "blog",
+                "userinfo"
+            ],
+            [
+                "view_userinfo",
+                "blog",
+                "userinfo"
+            ],
+            [
+                "add_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "change_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "delete_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "view_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "add_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "change_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "delete_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_session",
+                "sessions",
+                "session"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$120000$DBNVuUuRwPVZ$8gpvvAPIuKBQk8frcwDy4KF2RrkwsSBatS398OOaPNU=",
+        "last_login": "2021-04-28T07:09:11Z",
+        "is_superuser": true,
+        "username": "Cotyk",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-04-28T07:09:00Z",
+        "groups": [],
+        "user_permissions": [
+            [
+                "add_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "change_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "delete_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "view_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "add_group",
+                "auth",
+                "group"
+            ],
+            [
+                "change_group",
+                "auth",
+                "group"
+            ],
+            [
+                "delete_group",
+                "auth",
+                "group"
+            ],
+            [
+                "view_group",
+                "auth",
+                "group"
+            ],
+            [
+                "add_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "change_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "delete_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "view_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "add_user",
+                "auth",
+                "user"
+            ],
+            [
+                "change_user",
+                "auth",
+                "user"
+            ],
+            [
+                "delete_user",
+                "auth",
+                "user"
+            ],
+            [
+                "view_user",
+                "auth",
+                "user"
+            ],
+            [
+                "add_blog",
+                "blog",
+                "blog"
+            ],
+            [
+                "change_blog",
+                "blog",
+                "blog"
+            ],
+            [
+                "delete_blog",
+                "blog",
+                "blog"
+            ],
+            [
+                "view_blog",
+                "blog",
+                "blog"
+            ],
+            [
+                "add_comment",
+                "blog",
+                "comment"
+            ],
+            [
+                "change_comment",
+                "blog",
+                "comment"
+            ],
+            [
+                "delete_comment",
+                "blog",
+                "comment"
+            ],
+            [
+                "view_comment",
+                "blog",
+                "comment"
+            ],
+            [
+                "add_commentreply",
+                "blog",
+                "commentreply"
+            ],
+            [
+                "change_commentreply",
+                "blog",
+                "commentreply"
+            ],
+            [
+                "delete_commentreply",
+                "blog",
+                "commentreply"
+            ],
+            [
+                "view_commentreply",
+                "blog",
+                "commentreply"
+            ],
+            [
+                "add_document",
+                "blog",
+                "document"
+            ],
+            [
+                "change_document",
+                "blog",
+                "document"
+            ],
+            [
+                "delete_document",
+                "blog",
+                "document"
+            ],
+            [
+                "view_document",
+                "blog",
+                "document"
+            ],
+            [
+                "add_hashtag",
+                "blog",
+                "hashtag"
+            ],
+            [
+                "change_hashtag",
+                "blog",
+                "hashtag"
+            ],
+            [
+                "delete_hashtag",
+                "blog",
+                "hashtag"
+            ],
+            [
+                "view_hashtag",
+                "blog",
+                "hashtag"
+            ],
+            [
+                "add_userimage",
+                "blog",
+                "userimage"
+            ],
+            [
+                "change_userimage",
+                "blog",
+                "userimage"
+            ],
+            [
+                "delete_userimage",
+                "blog",
+                "userimage"
+            ],
+            [
+                "view_userimage",
+                "blog",
+                "userimage"
+            ],
+            [
+                "add_userinfo",
+                "blog",
+                "userinfo"
+            ],
+            [
+                "change_userinfo",
+                "blog",
+                "userinfo"
+            ],
+            [
+                "delete_userinfo",
+                "blog",
+                "userinfo"
+            ],
+            [
+                "view_userinfo",
+                "blog",
+                "userinfo"
+            ],
+            [
+                "add_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "change_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "delete_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "view_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "add_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "change_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "delete_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_session",
+                "sessions",
+                "session"
+            ]
+        ]
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "iizjqmg62gk9msrboh41m204oq7uzb8c",
+    "fields": {
+        "session_data": "ZjI4NTJmOTAwOTJjNTEzMDkxZjY0YzM0YzEwMTI1MjQxNDJmNGY4Yjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0MGRkNzk1MGFiZGI1YWNjMzY2NWVlODg0ZTZmYWViZmU5ZDU2MWViIn0=",
+        "expire_date": "2021-05-12T07:07:54.585Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2021-04-28T07:08:09.191Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2021-04-28T07:08:20.978Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"last_name\", \"user_permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2021-04-28T07:09:01.054Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "Cotyk",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2021-04-28T07:09:12.692Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "Cotyk",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"is_staff\", \"is_superuser\", \"user_permissions\", \"last_login\"]}}]"
+    }
+}
+]

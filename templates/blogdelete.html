@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form style="margin-top: 100px" method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <h2>Ви дійсно хочете видалити цей пост?</h2>
+    <button class="btn btn-warning-outline del_btn_yes" type="submit">Підтвердити</button>
+    <a type="button" class="btn btn-danger del_btn_no" href="{% url 'homepage' %}">Скасувати</a>
+</form>
+
+{% endblock body %}
