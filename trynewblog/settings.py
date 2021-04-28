@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = '%40gva!$-v$jg7rho53x=4rasrkjz%y1pclh#lp9m_xzm7i&57'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['apxib.site', 'apxib', 'www.apxib.site', 'www.apxib', '127.0.0.1', 'apxib-site.herokuapp.com']
+ALLOWED_HOSTS = ['apxib.site', 'apxib', 'www.apxib.site', 'www.apxib', '127.0.0.1', 'apxib-site.herokuapp.com', '194.44.151.212']
 
 
 # Application definition
@@ -78,18 +79,7 @@ WSGI_APPLICATION = 'trynewblog.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-    'default': {
-     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-     'NAME': 'apxib',
-     'USER': 'apxib',
-     'PASSWORD': '131101vvo',
-     'HOST': 'localhost',
-     'PORT': '',
-     }
+    'default': dj_database_url.config()
 }
 
 
