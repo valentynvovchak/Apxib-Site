@@ -1,10 +1,3 @@
-psycopg2-binary
-django==2.1.5
-gunicorn
-django-widget-tweaks
-django-simple-search
-Pillow
-whitenoise
 Django==2.1.5
 django-simple-search==1.0.2
 django-widget-tweaks==1.4.8
