@@ -15,7 +15,7 @@ DATABASES = {
     'default': dj_database_url.config()
 }
 
-STATIC_ROOT = ''
+
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'blog/static'), )
 
@@ -50,9 +50,12 @@ AWS_S3_FILE_OVERWRITE = True
 AWS_DEFAULT_ACL = 'public-read'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
 STATIC_URL = 'https://{0}/{1}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 MEDIA_URL = 'https://{0}/{1}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-MEDIA_ROOT = 'https://{0}/{1}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+MEDIA_ROOT = ''
+STATIC_ROOT = ''
 
 # [
 #     {
