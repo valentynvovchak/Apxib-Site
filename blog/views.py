@@ -13,6 +13,8 @@ from simple_search import search_filter
 from django.http import JsonResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from trynewblog.prod_settings import MEDIA_URL
+
 
 class Homepage(ListView):
     model = Blog
@@ -27,6 +29,7 @@ class Homepage(ListView):
         context.update({
             'hashtag': Hashtag.objects.order_by('name'),
             'blogs': Blog.objects.all(),
+            'MEDIA_URL_': MEDIA_URL,
         })
         return context
 
