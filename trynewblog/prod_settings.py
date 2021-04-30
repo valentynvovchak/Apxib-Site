@@ -11,11 +11,11 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['apxib.site', 'apxib', 'www.apxib.site', 'www.apxib', '127.0.0.1', 'apxib-site.herokuapp.com']
 
-DATABASES = {
-    'default': dj_database_url.config()
-}
+# DATABASES = {
+#     'default': dj_database_url.config()
+# }
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
