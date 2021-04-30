@@ -21,8 +21,8 @@ class Hashtag(models.Model):
 def get_topbanner_filename(instance, filename):
     title = instance.title
     slug = slugify(title)
-    # return "{}".format(filename)
-    return 'https://{0}/{1}/{2}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION, filename)
+    return "{}".format(filename)
+    # return 'https://{0}/{1}/{2}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION, filename)
 
 
 class Blog(models.Model):
@@ -47,8 +47,8 @@ class Blog(models.Model):
 def get_image_filename(instance, filename):
     title = instance.blog.id
     slug = slugify(title)
-    # return "{}".format(filename)
-    return 'https://{0}/{1}/{2}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION, filename)
+    return "{}".format(filename)
+    # return 'https://{0}/{1}/{2}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION, filename)
 
 
 class Document(models.Model):

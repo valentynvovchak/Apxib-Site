@@ -21,6 +21,7 @@ class Homepage(ListView):
 
     context_object_name = 'object_list'
     # print(Blog.objects.filter(title="Macbook Pro").first().pk)
+
     def get_context_data(self, **kwargs):
         context = super(Homepage, self).get_context_data(**kwargs)
         context.update({
