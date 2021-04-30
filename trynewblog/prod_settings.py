@@ -17,11 +17,9 @@ DATABASES = {
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static')
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-#     os.path.join(BASE_DIR, 'trynewblog/static'),
-#
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '/media/')
@@ -33,6 +31,9 @@ MANAGERS = (('Valiunya', 'valiunyavovchak@gmail.com'),)
 # S3 BUCKETS CONFIG
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+print()
+print(os.environ.get('AWS_ACCESS_KEY_ID'), '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+print()
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
