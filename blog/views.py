@@ -319,9 +319,9 @@ def categoryview(request, hashtags):
     except:
         object_list = ''
         err = 'Не має поста у цій категорії'
-        return render(request, 'categoryview.html', {'object_list':object_list, 'err':err, 'hashtag':hashtag})
+        return render(request, 'categoryview.html', {'object_list':object_list, 'err':err, 'hashtag': hashtag})
 
-    return render(request, 'categoryview.html', {'object_list':object_list, 'hashtag':hashtag})
+    return render(request, 'categoryview.html', {'object_list':object_list, 'hashtag':hashtag, 'MEDIA_URL_': MEDIA_URL})
 
 
 class AddHashtagview(CreateView):

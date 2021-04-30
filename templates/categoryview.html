@@ -32,7 +32,7 @@
             {% for post in object_list %}
             <div class="card border border-dark">
                     <a href="{% url 'postdetail' post.pk %}">
-                        <img class="card-img-top" src="/media/{{ post.topbanner}}" alt="Card image cap">
+                        <img class="card-img-top" src="{{MEDIA_URL_}}/{{ post.topbanner}}" alt="Card image cap">
                     </a>
 
                 <div class="card-body">
