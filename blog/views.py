@@ -176,6 +176,12 @@ class PostEdit(UpdateView):
     template_name = 'editingpost.html'
     fields = '__all__'
 
+    def get_context_data(self, **kwargs):
+        context = super(PostEdit, self).get_context_data(**kwargs)
+        context['MEDIA_URL_'] = MEDIA_URL
+
+        return context
+
 
 class BlogPostNew(CreateView):
     model = Blog
