@@ -57,6 +57,7 @@ MEDIA_URL = 'https://{0}/{1}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 MEDIA_ROOT = ''
 STATIC_ROOT = ''
 
+
 # [
 #     {
 #         "AllowedHeaders": [

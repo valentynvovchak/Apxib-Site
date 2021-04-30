@@ -61,7 +61,9 @@ def newpost(request):
     else:
         form = BlogForm
         formset = DocumentFormSet(queryset=Document.objects.none())
-        return render(request, 'postnew.html', {'form':form, 'formset':formset, 'hashtag':hashtag})
+        return render(
+            request, 'postnew.html', {'form': form, 'formset': formset, 'hashtag': hashtag, 'MEDIA_URL_': MEDIA_URL}
+        )
 
 
 # def user_image_func(request):
