@@ -20,7 +20,8 @@ STATIC_ROOT = ''
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'blog/static'), )
 
 # MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 ADMINS = (('Valentyn', 'valentyn.vovchak@gmail.com'),)
 MANAGERS = (('Valiunya', 'valiunyavovchak@gmail.com'),)
@@ -51,6 +52,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATIC_URL = 'https://{0}/{1}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 MEDIA_URL = 'https://{0}/{1}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+MEDIA_ROOT = 'https://{0}/{1}'.format(AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
 # [
 #     {
