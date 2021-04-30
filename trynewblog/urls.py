@@ -11,7 +11,6 @@ urlpatterns = [
     path('12iuTY7fSR566531LKJJGG9974787111hlloa1224/admin/', admin.site.urls),
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
-
 if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
