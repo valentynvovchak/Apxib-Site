@@ -1,4 +1,4 @@
-from .models import Comment, CommentReply, Blog, Document, UserImage, UserInfo
+from .models import Blog, Document
 from django.forms import ModelForm, ImageField, FileField
 from PIL import Image
 from django import forms
@@ -18,49 +18,49 @@ class DocumentForm(ModelForm):
         model = Document
         fields = ('image', )
 
-class CommentForm(ModelForm):
-    class Meta:
-        model = Comment
-        fields = ['message']
+# class CommentForm(ModelForm):
+#     class Meta:
+#         model = Comment
+#         fields = ['message']
 
-class CommentReplyForm(ModelForm):
-    class Meta:
-        model = CommentReply
-        fields = ['message']
-
-
-class UserImageForm(ModelForm):
-    x = forms.FloatField(widget=forms.HiddenInput())
-    y = forms.FloatField(widget=forms.HiddenInput())
-    width = forms.FloatField(widget=forms.HiddenInput())
-    height = forms.FloatField(widget=forms.HiddenInput())
-
-    class Meta:
-        model = UserImage
-        fields = ('myimage','x', 'y', 'width', 'height')
+# class CommentReplyForm(ModelForm):
+#     class Meta:
+#         model = CommentReply
+#         fields = ['message']
 
 
-    def save(self):
-        photo = super(UserImageForm, self).save()
-
-        x = self.cleaned_data.get('x')
-        y = self.cleaned_data.get('y')
-        w = self.cleaned_data.get('width')
-        h = self.cleaned_data.get('height')
-
-        image = Image.open(photo.myimage)
-        cropped_image = image.crop((x, y, w+x, h+y))
-        resized_image = cropped_image.resize((200, 200), Image.ANTIALIAS)
-        resized_image.save(photo.myimage.path)
-
-        return photo
-
-class UserInfoForm(ModelForm):
-    email = forms.EmailField()
-    class Meta:
-        model = UserInfo
-        exclude = ('author', 'views')
-        fields = ('displayname', 'designation', 'description', 'birthdate', 'email')
-#        fields = '__all__'
-
+# class UserImageForm(ModelForm):
+#     x = forms.FloatField(widget=forms.HiddenInput())
+#     y = forms.FloatField(widget=forms.HiddenInput())
+#     width = forms.FloatField(widget=forms.HiddenInput())
+#     height = forms.FloatField(widget=forms.HiddenInput())
+#
+#     class Meta:
+#         model = UserImage
+#         fields = ('myimage','x', 'y', 'width', 'height')
+#
+#
+#     def save(self):
+#         photo = super(UserImageForm, self).save()
+#
+#         x = self.cleaned_data.get('x')
+#         y = self.cleaned_data.get('y')
+#         w = self.cleaned_data.get('width')
+#         h = self.cleaned_data.get('height')
+#
+#         image = Image.open(photo.myimage)
+#         cropped_image = image.crop((x, y, w+x, h+y))
+#         resized_image = cropped_image.resize((200, 200), Image.ANTIALIAS)
+#         resized_image.save(photo.myimage.path)
+#
+#         return photo
+#
+# class UserInfoForm(ModelForm):
+#     email = forms.EmailField()
+#     class Meta:
+#         model = UserInfo
+#         exclude = ('author', 'views')
+#         fields = ('displayname', 'designation', 'description', 'birthdate', 'email')
+# #        fields = '__all__'
+#
 

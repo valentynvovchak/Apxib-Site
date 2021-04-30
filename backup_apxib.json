@@ -115,46 +115,6 @@
                 "blog"
             ],
             [
-                "add_comment",
-                "blog",
-                "comment"
-            ],
-            [
-                "change_comment",
-                "blog",
-                "comment"
-            ],
-            [
-                "delete_comment",
-                "blog",
-                "comment"
-            ],
-            [
-                "view_comment",
-                "blog",
-                "comment"
-            ],
-            [
-                "add_commentreply",
-                "blog",
-                "commentreply"
-            ],
-            [
-                "change_commentreply",
-                "blog",
-                "commentreply"
-            ],
-            [
-                "delete_commentreply",
-                "blog",
-                "commentreply"
-            ],
-            [
-                "view_commentreply",
-                "blog",
-                "commentreply"
-            ],
-            [
                 "add_document",
                 "blog",
                 "document"
@@ -193,46 +153,6 @@
                 "view_hashtag",
                 "blog",
                 "hashtag"
-            ],
-            [
-                "add_userimage",
-                "blog",
-                "userimage"
-            ],
-            [
-                "change_userimage",
-                "blog",
-                "userimage"
-            ],
-            [
-                "delete_userimage",
-                "blog",
-                "userimage"
-            ],
-            [
-                "view_userimage",
-                "blog",
-                "userimage"
-            ],
-            [
-                "add_userinfo",
-                "blog",
-                "userinfo"
-            ],
-            [
-                "change_userinfo",
-                "blog",
-                "userinfo"
-            ],
-            [
-                "delete_userinfo",
-                "blog",
-                "userinfo"
-            ],
-            [
-                "view_userinfo",
-                "blog",
-                "userinfo"
             ],
             [
                 "add_contenttype",
@@ -393,46 +313,6 @@
                 "blog"
             ],
             [
-                "add_comment",
-                "blog",
-                "comment"
-            ],
-            [
-                "change_comment",
-                "blog",
-                "comment"
-            ],
-            [
-                "delete_comment",
-                "blog",
-                "comment"
-            ],
-            [
-                "view_comment",
-                "blog",
-                "comment"
-            ],
-            [
-                "add_commentreply",
-                "blog",
-                "commentreply"
-            ],
-            [
-                "change_commentreply",
-                "blog",
-                "commentreply"
-            ],
-            [
-                "delete_commentreply",
-                "blog",
-                "commentreply"
-            ],
-            [
-                "view_commentreply",
-                "blog",
-                "commentreply"
-            ],
-            [
                 "add_document",
                 "blog",
                 "document"
@@ -471,46 +351,6 @@
                 "view_hashtag",
                 "blog",
                 "hashtag"
-            ],
-            [
-                "add_userimage",
-                "blog",
-                "userimage"
-            ],
-            [
-                "change_userimage",
-                "blog",
-                "userimage"
-            ],
-            [
-                "delete_userimage",
-                "blog",
-                "userimage"
-            ],
-            [
-                "view_userimage",
-                "blog",
-                "userimage"
-            ],
-            [
-                "add_userinfo",
-                "blog",
-                "userinfo"
-            ],
-            [
-                "change_userinfo",
-                "blog",
-                "userinfo"
-            ],
-            [
-                "delete_userinfo",
-                "blog",
-                "userinfo"
-            ],
-            [
-                "view_userinfo",
-                "blog",
-                "userinfo"
             ],
             [
                 "add_contenttype",

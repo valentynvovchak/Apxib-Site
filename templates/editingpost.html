@@ -33,7 +33,7 @@
         <div class="row" >
             <div class="col-sm-10" >
                 <div style='border:2px solid black;' class='p-3'>
-                <code id="code">&lt;img class="img-fluid postimg" src="/media/post_images/назва_зображення_з_розширенням"&gt;</code>
+                <code id="code">&lt;img class="img-fluid postimg" src="/media/назва_зображення_з_розширенням"&gt;</code>
             </div>
             </div>
             <div class="col-sm-2">
@@ -42,6 +42,16 @@
         </div>
     </div>
 </div>
+    <!-- copy button logic -->
+<script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+          }
+</script>
 
 {% for d in documentdata %}
 

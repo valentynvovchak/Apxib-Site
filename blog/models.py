@@ -17,7 +17,7 @@ class Hashtag(models.Model):
 def get_topbanner_filename(instance, filename):
     title = instance.title
     slug = slugify(title)
-    return "documents/banner/{}/{}".format(slug, filename)
+    return "{}".format(filename)
 
 
 class Blog(models.Model):
@@ -42,7 +42,7 @@ class Blog(models.Model):
 def get_image_filename(instance, filename):
     title = instance.blog.id
     slug = slugify(title)
-    return "post_images/{}".format(filename)
+    return "{}".format(filename)
 
 
 class Document(models.Model):
@@ -54,55 +54,55 @@ class Document(models.Model):
 
 #-----------------------------------------------------------
 
-def get_user_image_filename(instance, filename):
-    title = instance.author
-    slug = slugify(title)
-    return "user_image_{}/{}".format(slug, filename)
+# def get_user_image_filename(instance, filename):
+#     title = instance.author
+#     slug = slugify(title)
+#     return "user_image_{}/{}".format(slug, filename)
 
-class UserImage(models.Model):
-    author = models.OneToOneField('auth.User', on_delete=models.CASCADE, null=True, default=True)
-    myimage = models.ImageField(upload_to=get_user_image_filename, default='user_image_noimg/jobs.jpg', null=True, blank=True)
-
-
-#------------------------------------------------------
-
-class Comment(models.Model):
-    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    message = models.CharField(max_length = 250)
-    usrimg = models.ForeignKey(UserImage, on_delete=models.CASCADE, null=True, blank=True)
-
-    def __str__(self):
-        return self.message
-
-
-class CommentReply(models.Model):
-    whichcomment = models.ForeignKey(Comment, on_delete=models.CASCADE)
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    message = models.CharField(max_length = 250)
-    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
-    usrimg = models.ForeignKey(UserImage, on_delete=models.CASCADE, null=True, blank=True)
-
-    
-
-    def __str__(self):
-        return self.message
-
-
-
+# class UserImage(models.Model):
+#     author = models.OneToOneField('auth.User', on_delete=models.CASCADE, null=True, default=True)
+#     myimage = models.ImageField(upload_to=get_user_image_filename, default='user_image_noimg/jobs.jpg', null=True, blank=True)
 
 
 #------------------------------------------------------
 
-class UserInfo(models.Model):
-    author = models.OneToOneField('auth.User', on_delete=models.CASCADE, null=True, blank=True)
-    displayname = models.CharField(max_length=50, null=True, blank=True)
-    designation = models.CharField(max_length=50, null=True, blank=True)
-    description = models.CharField(max_length=250, null=True, blank=True)
-    birthdate = models.DateField(null=True, blank=True)
-    views = models.PositiveIntegerField(default = 0)
+# class Comment(models.Model):
+#     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+#     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+#     message = models.CharField(max_length = 250)
+#     usrimg = models.ForeignKey(UserImage, on_delete=models.CASCADE, null=True, blank=True)
+#
+#     def __str__(self):
+#         return self.message
 
-    def get_absolute_url(self):
-        return reverse('homepage')
+
+# class CommentReply(models.Model):
+#     whichcomment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+#     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+#     message = models.CharField(max_length = 250)
+#     blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+#     usrimg = models.ForeignKey(UserImage, on_delete=models.CASCADE, null=True, blank=True)
+#
+#
+#
+#     def __str__(self):
+#         return self.message
+
+
+
+
+
+#------------------------------------------------------
+
+# class UserInfo(models.Model):
+#     author = models.OneToOneField('auth.User', on_delete=models.CASCADE, null=True, blank=True)
+#     displayname = models.CharField(max_length=50, null=True, blank=True)
+#     designation = models.CharField(max_length=50, null=True, blank=True)
+#     description = models.CharField(max_length=250, null=True, blank=True)
+#     birthdate = models.DateField(null=True, blank=True)
+#     views = models.PositiveIntegerField(default = 0)
+#
+#     def get_absolute_url(self):
+#         return reverse('homepage')
 
 #-------------------------------------------------------

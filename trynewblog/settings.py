@@ -12,21 +12,10 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import dj_database_url
+from boto.s3.connection import S3Connection
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%40gva!$-v$jg7rho53x=4rasrkjz%y1pclh#lp9m_xzm7i&57'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['apxib.site', 'apxib', 'www.apxib.site', 'www.apxib', '127.0.0.1', 'apxib-site.herokuapp.com', '194.44.151.212']
 
 
 # Application definition
@@ -38,9 +27,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'blog',
     'accounts',
-    'widget_tweaks'
+
+    'widget_tweaks',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -77,10 +69,6 @@ WSGI_APPLICATION = 'trynewblog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
-DATABASES = {
-    'default': dj_database_url.config()
-}
 
 
 # Password validation
@@ -120,16 +108,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'blog/static')
-
-STATICFILES_DIRS = [
-    "blog/static/assets",
-    "blog/static/assets/bootstrap",
-    "blog/static/assets/bootstrap/",
-    "blog/static/assets/mobirise",
-    "blog/static/assets/dropdown",
-    "blog/static/assets/web",
-]
 
 
 LOGIN_REDIRECT_URL = 'homepage'
@@ -137,8 +115,11 @@ LOGOUT_REDIRECT_URL = 'homepage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 ADMINS = (('Valentyn', 'valentyn.vovchak@gmail.com'),)
 MANAGERS = (('Valiunya', 'valiunyavovchak@gmail.com'),)
+
+try:
+    from .local_settings import *
+except ImportError:
+    from .prod_settings import *
